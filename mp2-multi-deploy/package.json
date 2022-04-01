@@ -1,0 +1,18 @@
+{
+  "name": "mp2-multi-deploy",
+  "version": "1.0.0",
+  "description": "A multi deployment orchestrator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "app1:build": "nuxt build --config-file src/app1/nuxt.config.js --dotenv src/app1/.env",
+    "app1:start": "nuxt start --config-file src/app1/nuxt.config.js --dotenv src/app1/.env -p=4000",
+    "app2:build": "nuxt build --config-file src/app2/nuxt.config.js --dotenv src/app2/.env",
+    "app2:start": "nuxt start --config-file src/app2/nuxt.config.js --dotenv src/app2/.env -p=4001"
+  },
+  "author": "Jon Jon",
+  "license": "ISC",
+  "dependencies": {
+    "nuxt": "^2.15.8"
+  }
+}
